@@ -1,0 +1,4 @@
+FPS Medio: 8.99
+Inferencia Media: 91.78 ms
+Latencia Media: 126.12 ms
+Uso CPU Medio: 78.23%
