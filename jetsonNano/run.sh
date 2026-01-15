@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Cria uma nova sessão do tmux
-tmux new-session -d -s monitoramento 'python3 indexGUILess.py'
+tmux new-session -d -s monitoramento 'python3 index.py'
 
 # Divide a tela horizontalmente para o sensors
 tmux split-window -h 'watch -n 1 sensors'

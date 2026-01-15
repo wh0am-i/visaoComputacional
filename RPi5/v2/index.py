@@ -4,7 +4,7 @@ import numpy as np
 import psutil
 from ultralytics import YOLO
 
-model = YOLO('yolov8n.engine', task='detect')
+model = YOLO('yolov8n_ncnn_model/', task='detect')
 cap = cv2.VideoCapture(0)
 
 prevTime = 0

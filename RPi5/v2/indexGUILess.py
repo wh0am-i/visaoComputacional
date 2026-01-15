@@ -8,7 +8,7 @@ from flask import Flask, Response
 app = Flask(__name__)
 
 # Configurações do Modelo
-model = YOLO('yolov8n.engine', task='detect')
+model = YOLO('yolov8n_ncnn_model/', task='detect')
 cap = cv2.VideoCapture(0)
 
 # Variáveis de Log e FPS
