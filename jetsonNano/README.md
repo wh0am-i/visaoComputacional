@@ -14,12 +14,12 @@ jetsonNano/ <br>
 
 
 ---
-### Estrutura do código do container (não usar)
+### Estrutura do código do container 
 
 codigosContainer/ <br>
 ├── convert.py # Script para conversão de modelos (PT → ONNX → Engine) <br>
-├── index.py # Inferência padrão com YOLOv8 <br>
-├── index2.py # Inferência alternativa com métricas de desempenho <br>
+├── index2.py # Inferência padrão com YOLOv8 <br>
+├── index.py # Inferência alternativa com métricas de desempenho <br>
 ├── indexGUILess.py # Inferência sem interface gráfica (headless); substituir número de IP pelo da rede na linha 78 <br>
 ├── log.txt # Log de métricas (FPS, latência, CPU) <br>
 ├── yolov8n.pt # Modelo YOLOv8 original (PyTorch) <br>
@@ -35,7 +35,7 @@ codigosContainer/ <br>
 obs: já instalados no container Docker
 
 ### Instalação e uso
-- rodar setup.sh para instalar docker e importar container
+- rodar setup.sh para instalar docker e importar container *pode ser necessário utilizar xhost +local:root para liberar o display no container*
 - rodar run.sh para iniciar container
 - dentro do container navegar até a pasta visaoComputacional/
 - rodar run.sh

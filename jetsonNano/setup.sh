@@ -13,7 +13,8 @@ sudo apt install -y \
     ca-certificates \
     curl \
     gnupg \
-    lsb-release
+    lsb-release \
+    x11-xserver-utils  # necessário para xhost
 
 echo "🔹 Instalando Docker..."
 if ! command -v docker &> /dev/null; then
@@ -34,8 +35,9 @@ echo "⚠️  Faça logout/login após este script para usar docker sem sudo."
 echo "🔹 Puxando imagem Docker..."
 sudo docker pull $IMAGE
 
+# Não iniciar container ainda, só criar
 echo "🔹 Criando container..."
-sudo docker run -it \
+sudo docker create -it \
   --name "$CONTAINER" \
   -p 8080:8080 \
   --ipc=host \
@@ -47,3 +49,4 @@ sudo docker run -it \
   "$IMAGE"
 
 echo "✅ Setup concluído!"
+
