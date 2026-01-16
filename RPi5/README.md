@@ -30,4 +30,4 @@ RPi5/v2/ <br>
 - source venv/bin/activate para iniciar o venv
 - Rodar o setup.sh
 - Usar o GUIMode.sh ou terminalMode.sh conforme o modo desejado (normalmente o sistema já está no GUIMode)
-- Usar o run.sh para coletar métricas de performance ou algum dos index
+- Usar o run.sh para coletar métricas de performance ou algum dos index (alterar caminho do index.py para indexGUILess.py dentro do run.sh caso desejado usar o terminalMode)
