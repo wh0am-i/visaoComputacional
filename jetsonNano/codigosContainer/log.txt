@@ -1,2 +1,0 @@
-FPS Medio: 9.06
-Inferencia Media: 71.75 ms

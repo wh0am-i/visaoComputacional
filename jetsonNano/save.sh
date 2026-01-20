@@ -1,18 +1,19 @@
 #!/bin/bash
 
-# 1. Identifica o ID do container que está rodando a imagem da Ultralytics
-CONTAINER_ID=$(sudo docker ps --filter "ancestor=ultralytics/ultralytics:latest-jetson-jetpack4" --format "{{.ID}}")
+CONTAINER_NAME="container_visao_computacional"
+NOVO_NOME="container_teste_yolo"
+
+# 1. Identifica o ID do container pelo nome
+CONTAINER_ID=$(sudo docker ps --filter "name=$CONTAINER_NAME" --format "{{.ID}}")
 
 if [ -z "$CONTAINER_ID" ]; then
-    echo "❌ Erro: Nenhum container da Ultralytics foi encontrado rodando."
+    echo "❌ Erro: Nenhum container '$CONTAINER_NAME' foi encontrado rodando."
     exit 1
 fi
 
 echo "✅ Container encontrado: $CONTAINER_ID"
 
-NOVO_NOME="container_teste_yolo"
-
-# 3. Realiza o commit
+# 2. Realiza o commit
 echo "💾 Salvando alterações em '$NOVO_NOME'..."
 sudo docker commit $CONTAINER_ID $NOVO_NOME
 
@@ -22,3 +23,4 @@ if [ $? -eq 0 ]; then
 else
     echo "❌ Erro ao tentar realizar o commit."
 fi
+

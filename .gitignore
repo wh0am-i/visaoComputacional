@@ -1,1 +1,6 @@
 venv/
+jetsonNano/container/dataset/train/
+jetsonNano/container/dataset/val/
+jetsonNano/container/dataset/images/
+jetsonNano/container/dataset/labels/
+
