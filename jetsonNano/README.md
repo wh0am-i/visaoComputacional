@@ -26,6 +26,11 @@ codigosContainer/ <br>
 ├── yolov8n.onnx # Modelo exportado para ONNX <br>
 └── yolov8n.engine # Modelo otimizado (TensorRT / ncnn) <br>
 ---
+### Pasta Container
+
+A pasta container é compartilhada com o container docker, portanto é usada para guardar os arquivos de treino e validação
+
+---
 
 ### Requisitos
 - JetPack 4.6
