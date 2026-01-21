@@ -11,5 +11,5 @@ model.train(
     workers=8,
     name="yolov8n_finetune",
     pretrained=True,
-    classes=[0, 1, 2, 3, 4]
+    classes=[0, 1, 2, 3]
 )
