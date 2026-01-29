@@ -1,4 +1,4 @@
-#  Visão Computacional – YOLOv8
+#  SMVEP – YOLOv8
 
 Projeto de **visão computacional em tempo real** utilizando **YOLOv8**, focado em **benchmark, inferência otimizada e comparação de hardware embarcado**.
 
